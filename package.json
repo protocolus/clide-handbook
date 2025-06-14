@@ -1,0 +1,31 @@
+{
+  "name": "clide-handbook",
+  "version": "1.0.0",
+  "description": "The Clide Handbook - Autonomous Development with Claude Code",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build-html-book.js",
+    "build:pdf": "node scripts/build-pdf-book.js",
+    "serve": "npx http-server dist -p 8080",
+    "dev": "npm run build && npm run serve"
+  },
+  "keywords": [
+    "claude-code",
+    "autonomous-development",
+    "ai",
+    "mcp",
+    "typescript",
+    "react"
+  ],
+  "author": "Claude Code Community",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^11.1.1",
+    "highlight.js": "^11.9.0",
+    "jsdom": "^23.0.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "puppeteer": "^21.6.1"
+  }
+}
