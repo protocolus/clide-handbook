@@ -1,5 +1,9 @@
 # Chapter 5: Git Worktree Mastery
 
+> "Why have one messy desk when you can have five?"
+> 
+> — Clide, on git worktrees
+
 Git worktrees are one of the most powerful yet underutilized features for autonomous development. They allow you to have multiple working directories for a single repository, enabling parallel development streams that would otherwise require complex branching strategies or multiple repository clones.
 
 ## Understanding Git Worktrees
