@@ -1,5 +1,9 @@
 # Chapter 9: Tool Permissions and Security
 
+> "Just because you're paranoid doesn't mean your code isn't trying to delete everything."
+> 
+> — Clide, on implementing security layers
+
 Security is paramount when enabling autonomous development workflows. Claude Code's power comes with the responsibility to implement robust security measures that protect your codebase, infrastructure, and sensitive data while maintaining development velocity.
 
 ## Understanding the Security Model
