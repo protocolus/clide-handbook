@@ -253,12 +253,13 @@ Claude Code's command-line interface is designed for developer productivity:
 
 ### Planning Mode
 
-Claude Code includes a powerful planning mode that lets you collaborate on complex tasks before execution. Access planning mode by pressing **Shift+Tab+Tab** while typing your prompt:
+Claude Code includes a powerful planning mode that lets you collaborate on complex tasks before execution. Access planning mode by pressing **Shift+Tab+Tab** while in an interactive Claude session:
 
 ```bash
-# Enter planning mode with Shift+Tab+Tab, then describe your task
-claude -p "Refactor the authentication system to use React Context"
-# [Shift+Tab+Tab pressed here]
+# Start interactive Claude session
+claude
+# Then press Shift+Tab+Tab to enter planning mode
+# Type your task: "Refactor the authentication system to use React Context"
 # Planning mode activated - Claude will create a detailed plan first
 ```
 
