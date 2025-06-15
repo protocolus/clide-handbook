@@ -1,5 +1,9 @@
 # Chapter 10: The Future of Autonomous Development
 
+> "The future is here—it's just busy fixing merge conflicts."
+> 
+> — Clide, on the promise of autonomous development
+
 As we conclude this comprehensive guide to autonomous development with Claude Code, we stand at the threshold of a fundamental transformation in how software is built, tested, and deployed. The patterns, tools, and methodologies outlined in this handbook represent more than just technical improvements—they herald a new era of human-AI collaboration in software engineering.
 
 ## Reflecting on the Journey
