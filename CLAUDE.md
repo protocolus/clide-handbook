@@ -6,6 +6,37 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a documentation repository for Claude Code CLI workflows, focusing on git worktree integration, GitHub issue management, and development automation patterns. The repository contains comprehensive documentation in README.md titled "The Clide Handbook: Orchestrating Autonomous Development Workflows".
 
+## Commands
+
+### Building the Documentation
+```bash
+# Build HTML book
+npm run build
+
+# Build PDF version
+npm run build:pdf
+
+# Build and serve locally for development
+npm run dev
+
+# Just serve the built files
+npm run serve
+```
+
+## Architecture
+
+### Repository Structure
+- `/chapters/` - Book chapters in markdown format (11 chapters)
+- `/examples/` - Code examples demonstrating workflows
+- `/scripts/` - Build scripts for generating HTML/PDF
+- `/dist/` - Output directory for built documentation
+- `/appendix/` - Additional reference materials
+
+### Build System
+- `scripts/build-html-book.js` - Generates full-featured HTML with syntax highlighting using marked and highlight.js
+- `scripts/build-pdf-book.js` - Creates PDF version using Puppeteer
+- `scripts/build-simple-html.sh` - Bash script for simple HTML generation
+
 ## Key Documentation Areas
 
 ### 1. Claude Code Custom Commands
@@ -72,13 +103,3 @@ Commands should return clear status indicators:
 3. **Use descriptive worktree names** like `fix-issue-1234`
 4. **Clean up worktrees** after use with `git worktree remove`
 5. **Return clear status values** for automation scripts to parse
-
-## Common Tasks
-
-Since this is a documentation repository, common tasks involve:
-- Updating workflow documentation
-- Adding new custom command examples
-- Improving automation scripts
-- Documenting best practices and patterns
-
-Note: This repository does not contain executable code, build systems, or tests - it's purely documentation for Claude Code workflows.

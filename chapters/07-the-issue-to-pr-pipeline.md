@@ -536,7 +536,8 @@ main() {
     log "$ANALYSIS"
     
     # Extract complexity from analysis
-    COMPLEXITY=$(echo "$ANALYSIS" | grep -oP 'Complexity: \K\w+' || echo "unknown")
+    # Note: Using grep -o instead of -oP for Linux compatibility
+    COMPLEXITY=$(echo "$ANALYSIS" | grep -o 'Complexity: [a-zA-Z]*' | cut -d' ' -f2 || echo "unknown")
     log "Issue complexity: $COMPLEXITY"
     
     # Check if we should proceed

@@ -2,6 +2,17 @@
 
 > "The best developers are not those who write the most code, but those who orchestrate the most intelligence."
 
+## System Requirements
+
+**This book assumes a Linux development environment.** All commands, examples, and workflows are tested on Linux systems. While many concepts apply to other platforms, the specific command syntax and examples are Linux-focused.
+
+### Prerequisites
+- Linux operating system (Ubuntu 20.04+ recommended)
+- Node.js v18 or higher
+- Git v2.30 or higher (for advanced worktree support)
+- GitHub CLI (gh) v2.0 or higher
+- Basic familiarity with command line operations
+
 ## About This Book
 
 Welcome to **The Clide Handbook: Orchestrating Autonomous Development Workflows**. This book will transform how you think about software development, moving from manual coding to intelligent automation that amplifies your capabilities.
@@ -24,6 +35,8 @@ By the end of this book, you'll be able to:
 git clone https://github.com/protocolus/clide-handbook
 cd clide-handbook
 ```
+
+> **Note**: This repository URL is used for documentation purposes. When implementing these examples, adapt the patterns to your specific repository structure and requirements.
 
 The repository structure:
 ```

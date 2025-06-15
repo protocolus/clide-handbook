@@ -30,7 +30,7 @@ gh --version    # GitHub CLI installed
 ### Step 1: Install the CLI
 
 ```bash
-npm install -g @anthropic/claude-code-cli
+npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version

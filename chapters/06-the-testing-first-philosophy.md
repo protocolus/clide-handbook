@@ -1153,6 +1153,8 @@ describe('ProductList Performance', () => {
     );
 
     // Initial render should be fast even with many items
+    // Note: Performance thresholds are environment-dependent
+    // Consider using relative comparisons or CI-specific values
     expect(renderTime).toBeLessThan(100); // ms
 
     // Re-renders should be even faster
@@ -1184,12 +1186,13 @@ Set up Mock Service Worker for consistent API testing:
 
 ```typescript
 // src/__mocks__/handlers.ts
-import { rest } from 'msw';
+import { http, HttpResponse, delay } from 'msw';
 
 export const handlers = [
-  rest.get('/api/products', (req, res, ctx) => {
-    const category = req.url.searchParams.get('category');
-    const search = req.url.searchParams.get('search');
+  http.get('/api/products', ({ request }) => {
+    const url = new URL(request.url);
+    const category = url.searchParams.get('category');
+    const search = url.searchParams.get('search');
 
     let products = [...mockProducts];
 
@@ -1203,42 +1206,38 @@ export const handlers = [
       );
     }
 
-    return res(ctx.json({ products }));
+    return HttpResponse.json({ products });
   }),
 
-  rest.post('/api/cart/add', async (req, res, ctx) => {
-    const { productId, quantity } = await req.json();
+  http.post('/api/cart/add', async ({ request }) => {
+    const { productId, quantity } = await request.json();
 
     // Simulate validation
     if (!productId || quantity < 1) {
-      return res(
-        ctx.status(400),
-        ctx.json({ error: 'Invalid request' })
+      return HttpResponse.json(
+        { error: 'Invalid request' },
+        { status: 400 }
       );
     }
 
-    return res(
-      ctx.json({ 
-        success: true, 
-        cartId: 'cart-123',
-        itemCount: quantity 
-      })
-    );
+    return HttpResponse.json({ 
+      success: true, 
+      cartId: 'cart-123',
+      itemCount: quantity 
+    });
   }),
 
-  rest.post('/api/orders', async (req, res, ctx) => {
-    const order = await req.json();
+  http.post('/api/orders', async ({ request }) => {
+    const order = await request.json();
 
     // Simulate processing time
-    await ctx.delay(500);
+    await delay(500);
 
-    return res(
-      ctx.json({
-        orderId: `order-${Date.now()}`,
-        status: 'confirmed',
-        estimatedDelivery: '3-5 business days',
-      })
-    );
+    return HttpResponse.json({
+      orderId: `order-${Date.now()}`,
+      status: 'confirmed',
+      estimatedDelivery: '3-5 business days',
+    });
   }),
 ];
 

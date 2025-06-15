@@ -260,6 +260,14 @@ mkdir -p shared/node_modules
 ln -sf ../../shared/node_modules node_modules
 ```
 
+> **⚠️ Warning**: Symlinking `node_modules` across worktrees can cause issues with:
+> - Native modules compiled for different Node.js versions
+> - Platform-specific binaries 
+> - Development vs production dependencies
+> - Tools that don't follow symlinks properly
+> 
+> Consider using `pnpm` with workspace support instead for safer dependency sharing.
+
 ### Database Isolation
 
 For applications with databases, isolate each worktree:
