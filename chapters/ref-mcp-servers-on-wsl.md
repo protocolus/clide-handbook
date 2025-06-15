@@ -12,8 +12,6 @@ This chapter will guide you through setting up a production-grade MCP developmen
 
 - **Near-native Linux performance** for MCP server operations
 - **Seamless connectivity** between Windows applications and containerized services
-- **Production parity** with your deployment environment
-- **Enhanced security** through containerization and firewall integration
 
 ## The Architecture: Understanding the Stack
 
@@ -396,29 +394,6 @@ pageReporting=true
 kernelCommandLine=cgroup_no_v1=all systemd.unified_cgroup_hierarchy=1
 ```
 
-### Docker Performance Tuning
-
-**BuildKit Optimization:**
-```bash
-# Enable BuildKit for faster builds
-export DOCKER_BUILDKIT=1
-export COMPOSE_DOCKER_CLI_BUILD=1
-```
-
-**Container Resource Limits:**
-```yaml
-services:
-  mcp-server:
-    deploy:
-      resources:
-        limits:
-          memory: 2G
-          cpus: '1.0'
-        reservations:
-          memory: 512M
-          cpus: '0.5'
-```
-
 
 ## Troubleshooting Common Issues
 
@@ -539,52 +514,10 @@ Check:
 Report status and any issues found. Return "HEALTHY" or "ISSUES_FOUND: [details]"
 ```
 
-## Advanced Patterns
-
-### Multi-Environment Configuration
-
-**Development vs Production Parity:**
-
-```yaml
-# docker-compose.dev.yml
-version: '3.8'
-services:
-  memory-server:
-    image: mcp/memory
-    environment:
-      - DEBUG=true
-      - LOG_LEVEL=debug
-    volumes:
-      - ./dev-data:/app/data
-    ports:
-      - "127.0.0.1:8001:8001"
-
-# docker-compose.prod.yml  
-version: '3.8'
-services:
-  memory-server:
-    image: mcp/memory:v1.2.0
-    environment:
-      - LOG_LEVEL=info
-    volumes:
-      - memory-prod-data:/app/data
-    # No exposed ports - internal network only
-```
-
-**Usage**:
-```bash
-# Development
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
-
-# Production
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
-```
-
 ### Next Steps
 
 1. **Set up your environment** using the Golden Path configuration
 2. **Create your first MCP server** following the container patterns
 3. **Integrate with Claude Code** using custom commands
-4. **Scale to production** using the multi-environment patterns
 
-With this foundation in place, you're ready to build sophisticated MCP-enabled applications that leverage the full power of autonomous development workflows.
+With this foundation in place, you're ready to utilize sophisticated MCP-enabled applications that leverage the full power of autonomous development workflows.
