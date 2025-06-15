@@ -1,15 +1,42 @@
-"The Clide Handbook: Orchestrating Autonomous Development Workflows"
-Subtitle: "Build Self-Healing Software with AI-Driven Git Worktrees, Automated Testing, and Intelligent Code Review"
-
 # The Clide Handbook
+
+**Orchestrating Autonomous Development Workflows**
 
 > Build Self-Healing Software with AI-Driven Git Worktrees, Automated Testing, and Intelligent Code Review
 
-## 📚 Complete Book + 💻 Working Code
+## What is Clide?
 
-This repository contains both the complete handbook for autonomous development with Claude Code **and** all the working code examples, configurations, and templates referenced throughout the book.
+**Clide** (CLI + IDE) is a comprehensive methodology and toolkit for autonomous development with Claude Code. It transforms Claude Code from a simple AI coding assistant into a powerful development environment that can handle complex, multi-step workflows through Model Context Protocol (MCP) and intelligent command orchestration.
 
-## 🚀 Quick Start
+## About This Book
+
+This repository contains both the complete handbook for autonomous development with Claude Code and all the working code examples, configurations, and templates referenced throughout the book.
+
+**Jump to:** [Table of Contents](#table-of-contents) | [Quick Start](#quick-start) | [Key Features](#key-features) | [Basic Setup](#basic-setup) | [Custom Commands](#custom-commands) | [Examples](#example-workflows)
+
+## Table of Contents
+
+### Part I: Foundations
+- **[Introduction](chapters/00-introduction.md)** - Welcome to the future of development
+- **[Chapter 1: The Age of Autonomous Development](chapters/01-the-age-of-autonomous-development.md)** - The evolution of coding assistance
+- **[Chapter 2: Understanding Claude Code](chapters/02-understanding-claude-code.md)** - Your new development partner
+- **[Chapter 3: Setting Up Your Environment](chapters/03-setting-up-your-environment.md)** - Installation and configuration
+
+### Part II: Core Workflows
+- **[Chapter 5: Git Worktree Mastery](chapters/05-git-worktree-mastery.md)** - Parallel development streams
+- **[Chapter 6: The Testing-First Philosophy](chapters/06-the-testing-first-philosophy.md)** - AI-powered test generation
+- **[Chapter 7: The Issue-to-PR Pipeline](chapters/07-the-issue-to-pr-pipeline.md)** - Automated bug fixing workflow
+
+### Part III: Advanced Patterns
+- **[Chapter 8: Advanced Command Patterns](chapters/08-advanced-command-patterns.md)** - Self-healing code systems
+- **[Chapter 9: Tool Permissions and Security](chapters/09-tool-permissions-and-security.md)** - Implementing security layers
+- **[Chapter 10: Advanced Automation and Future Patterns](chapters/10-advanced-automation-and-future-patterns.md)** - Emerging patterns
+- **[Chapter 11: Automated Issue Detection and Dispatch](chapters/11-automated-issue-detection-and-dispatch.md)** - Autonomous issue handling
+
+### Part IV: Conclusion
+- **[Chapter 12: Conclusion](chapters/12-conclusion.md)** - The future of autonomous development
+
+## Quick Start
 
 Clone this repository to get everything you need:
 
@@ -21,14 +48,6 @@ cd clide-handbook
 # Working code examples are in examples/
 # Ready-to-use templates are in templates/
 ```
-
-## What is Clide?
-
-**Clide** (CLI + IDE) is a comprehensive methodology and toolkit for autonomous development with Claude Code. It transforms Claude Code from a simple AI coding assistant into a powerful development environment that can handle complex, multi-step workflows through Model Context Protocol (MCP) and intelligent command orchestration.
-
-## Overview
-
-Claude Code is an agentic command line tool that allows developers to delegate coding tasks to Claude directly from their terminal. Clide extends this functionality by providing structured workflows, custom commands, and integration patterns with git worktree and GitHub issue management.
 
 ## Repository Structure
 
@@ -62,20 +81,20 @@ clide-handbook/
 
 ## Key Features
 
-### 🧠 Model Context Protocol (MCP) Integration
+### Model Context Protocol (MCP) Integration
 - **Deep Contextual Understanding**: Claude Code understands your entire project structure, not just individual files
 - **Secure Tool Integration**: Connect to databases, APIs, development tools, and monitoring services with fine-grained permissions
 - **Production Monitoring**: Integrated Sentry error tracking, analysis, and automated fix generation
 - **Custom MCP Servers**: Build project-specific tools that integrate seamlessly with Claude Code
 - **Rich Context Awareness**: Leverage relationships, dependencies, patterns, and production data across your codebase
 
-### 🚀 Autonomous Development Workflows
+### Autonomous Development Workflows
 - **Issue-to-PR Pipeline**: Automated bug fixing from GitHub issues to merged pull requests
 - **Intelligent Testing**: AI-powered test generation, execution, and maintenance
 - **Type-Safe Automation**: TypeScript-first approach ensuring reliable autonomous operations
 - **Git Worktree Integration**: Parallel development streams with isolated environments
 
-### 🔧 Advanced Command Architecture
+### Advanced Command Architecture
 - **Custom Commands**: Build domain-specific automation tailored to your workflow
 - **Command Composition**: Chain simple commands into complex workflows
 - **Context-Aware Execution**: Commands that understand project state and history
