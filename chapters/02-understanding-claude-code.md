@@ -251,6 +251,32 @@ Claude Code is powerful but not omniscient. Understanding its limitations helps 
 
 Claude Code's command-line interface is designed for developer productivity:
 
+### Planning Mode
+
+Claude Code includes a powerful planning mode that lets you collaborate on complex tasks before execution. Access planning mode by pressing **Shift+Tab+Tab** while typing your prompt:
+
+```bash
+# Enter planning mode with Shift+Tab+Tab, then describe your task
+claude -p "Refactor the authentication system to use React Context"
+# [Shift+Tab+Tab pressed here]
+# Planning mode activated - Claude will create a detailed plan first
+```
+
+When in planning mode, Claude Code will:
+- **Analyze** the task complexity and scope
+- **Break down** the work into specific steps
+- **Identify** all files that need modification
+- **Plan** the order of operations to avoid conflicts
+- **Present** the plan for your review before execution
+
+This is particularly valuable for:
+- Complex multi-file refactors
+- Architecture changes
+- Feature implementations affecting multiple systems
+- Bug fixes that might have cascading effects
+
+You can review the plan, request modifications, or approve it to begin execution. This collaborative approach reduces the risk of unexpected changes and ensures alignment with your intentions.
+
 ### Basic Commands
 
 ```bash
