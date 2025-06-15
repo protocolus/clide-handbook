@@ -1,6 +1,8 @@
 # Chapter 7: The Issue-to-PR Pipeline
 
 > "From bug report to deployed fix in under an hour—without human intervention. This is the promise of autonomous development."
+> 
+> — Clide
 
 ## The Autonomous Development Loop
 

@@ -1,6 +1,8 @@
 # Introduction: Welcome to the Future of Development
 
 > "The best developers are not those who write the most code, but those who orchestrate the most intelligence."
+> 
+> — Clide
 
 ## System Requirements
 

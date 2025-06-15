@@ -1,6 +1,8 @@
 # Chapter 1: The Age of Autonomous Development
 
 > "The best code is the code that writes itself correctly."
+> 
+> — Clide
 
 ## The Morning That Changed Everything
 

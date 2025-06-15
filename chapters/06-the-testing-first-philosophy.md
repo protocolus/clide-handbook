@@ -1,6 +1,8 @@
 # Chapter 6: The Testing-First Philosophy
 
 > "A test is worth a thousand console.logs."
+> 
+> — Clide
 
 ## The Paradigm Shift
 

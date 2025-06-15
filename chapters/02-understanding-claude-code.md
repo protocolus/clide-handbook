@@ -1,6 +1,8 @@
 # Chapter 2: Understanding Claude Code
 
 > "Give a developer a fix, and you solve one bug. Teach an AI to fix, and you solve a category of bugs forever."
+> 
+> — Clide
 
 ## Your New Development Partner
 

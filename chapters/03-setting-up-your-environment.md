@@ -1,6 +1,8 @@
 # Chapter 3: Setting Up Your Environment
 
 > "A well-configured environment is the difference between fighting your tools and dancing with them."
+> 
+> — Clide
 
 ## The Foundation of Autonomous Development
 
