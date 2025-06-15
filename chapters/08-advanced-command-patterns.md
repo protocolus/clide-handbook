@@ -1,5 +1,9 @@
 # Chapter 8: Advanced Command Patterns
 
+> "I don't have trust issues, I just prefer my commands with built-in therapy sessions."
+> 
+> — Clide, on self-healing code patterns
+
 As your autonomous development workflows mature, you'll discover that simple commands evolve into sophisticated patterns that handle complex scenarios. This chapter explores advanced command patterns that unlock Claude Code's full potential for intelligent, context-aware development.
 
 ## Conditional Command Flows
