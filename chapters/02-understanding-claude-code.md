@@ -277,6 +277,236 @@ claude -p "Run the test suite and fix any failing tests. Focus on unit tests fir
 claude -p "Review the changes in the current branch and suggest improvements for type safety"
 ```
 
+## The CLAUDE.md Configuration File
+
+One of Claude Code's most powerful features is its ability to understand your project through the `CLAUDE.md` file. This file serves as a bridge between your repository and Claude Code, providing essential context that transforms Claude from a generic AI assistant into a project-specific development partner.
+
+### What is CLAUDE.md?
+
+The `CLAUDE.md` file is a project configuration file that tells Claude Code everything it needs to know about your codebase:
+
+- **Architecture and structure** of your application
+- **Development commands** for building, testing, and running
+- **Coding standards** and style guidelines
+- **Important patterns** and conventions used in your codebase
+- **Dependencies and tools** in your development environment
+
+Think of it as documentation that's specifically written for AI consumption—not just for humans.
+
+### Creating an Effective CLAUDE.md
+
+Here's a comprehensive template for a powerful `CLAUDE.md` file:
+
+```markdown
+# CLAUDE.md
+
+This file provides guidance to Claude Code when working with this repository.
+
+## Project Overview
+
+This is a React TypeScript application with Express.js backend using PostgreSQL database.
+
+### Architecture
+- Frontend: React 18 with TypeScript, using Vite for building
+- Backend: Express.js with TypeScript, using Prisma ORM
+- Database: PostgreSQL with Redis for caching
+- Testing: Jest for unit tests, Playwright for E2E tests
+
+## Development Commands
+
+### Setup
+```bash
+npm install
+npm run db:setup
+```
+
+### Development
+```bash
+npm run dev          # Start development server
+npm run dev:api      # Start API server only
+npm run dev:client   # Start client only
+```
+
+### Testing
+```bash
+npm test             # Run unit tests
+npm run test:e2e     # Run E2E tests
+npm run test:watch   # Run tests in watch mode
+```
+
+### Building
+```bash
+npm run build        # Build for production
+npm run type-check   # TypeScript checking
+npm run lint         # ESLint checking
+```
+
+## Code Standards
+
+### TypeScript
+- Strict mode enabled
+- Prefer interfaces over types for object shapes
+- Use explicit return types for public functions
+- No `any` types allowed (enforced by ESLint)
+
+### React Patterns
+- Use functional components with hooks
+- Custom hooks for reusable logic
+- Prefer composition over inheritance
+- Always use TypeScript prop interfaces
+
+### File Organization
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Route components  
+├── hooks/         # Custom React hooks
+├── services/      # API and business logic
+├── types/         # TypeScript type definitions
+└── utils/         # Pure utility functions
+```
+
+### API Patterns
+- RESTful endpoints following OpenAPI spec
+- Input validation using Zod schemas
+- Error handling with custom error classes
+- Database queries through Prisma ORM only
+
+## Important Notes
+
+- Always run `npm run type-check` before committing
+- E2E tests must pass before merging to main
+- Database migrations require team review
+- Environment variables are documented in `.env.example`
+
+## Common Tasks
+
+When adding new features:
+1. Create types in `src/types/`
+2. Add components to `src/components/`
+3. Create API endpoints in `src/api/`
+4. Add tests for all public functions
+5. Update relevant documentation
+```
+
+### Key Sections Explained
+
+**Project Overview**: Gives Claude immediate context about your technology stack and architecture. This helps Claude make appropriate suggestions and avoid incompatible patterns.
+
+**Development Commands**: Essential for Claude to understand how to build, test, and run your project. Claude can then automatically run these commands when making changes.
+
+**Code Standards**: Defines your team's coding conventions. Claude will follow these patterns when generating or modifying code.
+
+**File Organization**: Helps Claude understand where different types of code belong and maintain consistent project structure.
+
+**Common Tasks**: Provides step-by-step workflows for frequent development tasks, ensuring Claude follows your team's established processes.
+
+### CLAUDE.md Best Practices
+
+1. **Keep it Current**: Update CLAUDE.md when you change build tools, dependencies, or conventions.
+
+2. **Be Specific**: Instead of "use TypeScript," write "use strict TypeScript with explicit return types for all public functions."
+
+3. **Include Examples**: Show actual code patterns you want Claude to follow:
+   ```markdown
+   ### Component Pattern Example
+   ```typescript
+   interface Props {
+     title: string;
+     onClose: () => void;
+   }
+   
+   export function Modal({ title, onClose }: Props): JSX.Element {
+     // Component implementation
+   }
+   ```
+
+4. **Document Anti-Patterns**: Tell Claude what NOT to do:
+   ```markdown
+   ### Avoid These Patterns
+   - Don't use `any` types
+   - Don't directly manipulate DOM in React components
+   - Don't use `var` declarations
+   ```
+
+5. **Version Control**: Check CLAUDE.md into git so all team members benefit from the configuration.
+
+### Advanced CLAUDE.md Features
+
+For complex projects, you can include:
+
+**Environment-Specific Notes**:
+```markdown
+## Environment Setup
+- Development: Uses local PostgreSQL on port 5432
+- Testing: Uses in-memory SQLite database
+- Production: Uses managed PostgreSQL with connection pooling
+```
+
+**Security Guidelines**:
+```markdown
+## Security
+- All user inputs must be validated with Zod
+- Database queries must use parameterized statements
+- API keys stored in environment variables only
+- No secrets in client-side code
+```
+
+**Performance Considerations**:
+```markdown
+## Performance
+- Database queries should include appropriate indexes
+- Images must be optimized and use WebP format
+- Bundle size budget: 500KB gzipped
+- API responses should be cacheable where possible
+```
+
+### CLAUDE.md for Different Project Types
+
+**Node.js API**:
+```markdown
+# CLAUDE.md
+
+## Project Type
+RESTful API using Express.js and TypeScript with MongoDB.
+
+## Key Dependencies
+- Express.js for HTTP server
+- Mongoose for MongoDB ODM
+- Joi for input validation
+- Jest for testing
+
+## API Patterns
+- Controller → Service → Repository architecture
+- Async/await throughout (no callbacks)
+- Error handling via express-async-errors
+- OpenAPI documentation in swagger.yaml
+```
+
+**Python Django Project**:
+```markdown
+# CLAUDE.md
+
+## Project Type
+Django web application with PostgreSQL and Celery for background tasks.
+
+## Development Commands
+```bash
+python manage.py runserver    # Development server
+python manage.py test         # Run tests
+python manage.py migrate      # Run migrations
+celery -A myapp worker        # Start Celery worker
+```
+
+## Django Patterns
+- Class-based views preferred
+- Models in separate app modules
+- Forms using Django Forms with validation
+- Templates using Django template language
+```
+
+The `CLAUDE.md` file transforms Claude Code from a generic assistant into a project-aware development partner. With proper configuration, Claude understands your codebase as well as a senior developer who's been working on the project for months.
+
 ## Real-World Scenarios
 
 ### Scenario 1: The Monday Morning Cleanup
