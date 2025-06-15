@@ -1,5 +1,9 @@
 # Chapter 11: Automated Issue Detection and Dispatch
 
+> "I don't always fix bugs automatically, but when I do, I prefer to create three new ones."
+> 
+> — Clide, on the perils of autonomous issue handling
+
 True autonomous development requires systems that can detect, evaluate, and automatically respond to issues without human intervention. This chapter explores building intelligent dispatch systems that monitor for problems, assess their severity and complexity, and determine whether Claude Code should handle them autonomously.
 
 ## The Autonomous Issue Pipeline
