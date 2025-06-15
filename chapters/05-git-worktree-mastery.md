@@ -453,3 +453,7 @@ async createIntegrationEnvironment() {
 - Implement proper cleanup to avoid leaving credentials in abandoned worktrees
 
 Git worktrees transform how Claude Code can approach complex development tasks, enabling true parallel development and sophisticated CI/CD workflows that would be impossible with traditional single-worktree approaches.
+
+---
+
+**Previous:** [Chapter 3: Setting Up Your Environment](03-setting-up-your-environment.md) | **Next:** [Chapter 6: The Testing-First Philosophy](06-the-testing-first-philosophy.md)

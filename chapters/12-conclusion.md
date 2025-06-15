@@ -54,3 +54,7 @@ Welcome to the future of development. The code is waiting to be written—autono
 ---
 
 *Thank you for joining us on this journey through autonomous development. For updates, examples, and community discussions, visit the handbook repository and connect with fellow practitioners building the future of software development.*
+
+---
+
+**Previous:** [Chapter 11: Automated Issue Detection and Dispatch](11-automated-issue-detection-and-dispatch.md)

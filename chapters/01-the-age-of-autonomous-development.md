@@ -40,12 +40,12 @@ def calculate_total(items):
     # return sum(item.price * item.quantity for item in items)
 ```
 
-### Wave 3: Autonomy (2020s-Present)
-The third wave—where we are now—introduces truly autonomous development. AI agents don't just suggest; they plan, implement, test, and even review their own work. The developer becomes a conductor, orchestrating complex symphonies of automated development.
+### Wave 3: Intelligent Assistance (2020s-Present)
+The third wave—where we are now—introduces intelligent development assistance. AI agents can understand context, suggest solutions, and help implement changes with human oversight. The developer remains in control while gaining a powerful AI collaborator for routine tasks.
 
 ```bash
-claude -p "Fix all type errors in the codebase, ensure tests pass"
-# AI analyzes, fixes, tests, and commits—autonomously
+claude -p "Help me fix the type errors in UserService.ts"
+# AI analyzes the file, suggests fixes, developer reviews and applies
 ```
 
 ## The Compound Effect of Autonomous Workflows
@@ -175,4 +175,4 @@ Welcome to the future of software engineering. Let's build something incredible 
 
 ---
 
-*Continue to Chapter 2: Understanding Claude Code →*
+**Previous:** [Introduction](00-introduction.md) | **Next:** [Chapter 2: Understanding Claude Code](02-understanding-claude-code.md)

@@ -223,4 +223,4 @@ cd clide-handbook
 cat chapters/01-the-age-of-autonomous-development.md
 ```
 
-*Continue to Chapter 1: The Age of Autonomous Development →*
+**Next:** [Chapter 1: The Age of Autonomous Development](01-the-age-of-autonomous-development.md)
